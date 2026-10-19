@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        // Screen Title
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SMS Notification Settings"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        // Line 1
+        <TextView
+            android:id="@+id/txtLine1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Sign up for SMS inventory notifications"
+            android:gravity="center"
+            android:textSize="13sp" />
+
+        // Line 2
+        <TextView
+            android:id="@+id/txtLine2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Permission is required for SMS notifications"
+            android:gravity="center"
+            android:textSize="13sp" />
+
+        // Permission Status
+        <TextView
+            android:id="@+id/txtSmsPermissionStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="SMS Permission Status: Unknown"
+            android:gravity="center"
+            android:textSize="13sp" />
+
+        // Request Permission button
+        <Button
+            android:id="@+id/btnRequestPermission"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:text="REQUEST PERMISSION"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:backgroundTint="@color/purple_500" />
+
+        // Divider line
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="28dp"
+            android:background="#DDDDDD" />
+
+        // Phone number label
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Phone number for alerts"
+            android:gravity="center"
+            android:textSize="13sp" />
+
+        // Phone number entry
+        <EditText
+            android:id="@+id/edtPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:hint="Enter phone number"
+            android:inputType="phone"
+            android:textSize="13sp" />
+
+        // Switch row
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Send SMS when stock is low"
+                android:textSize="13sp" />
+
+            <Switch
+                android:id="@+id/switchLowStock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        // Save Settings
+        <Button
+            android:id="@+id/btnSaveSettings"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="22dp"
+            android:text="SAVE SETTINGS"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:backgroundTint="@color/purple_500" />
+
+        // Back to Inventory
+        <Button
+            android:id="@+id/btnBackToData"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:text="BACK TO INVENTORY"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:backgroundTint="@color/purple_500" />
+
+    </LinearLayout>
+
+</ScrollView>

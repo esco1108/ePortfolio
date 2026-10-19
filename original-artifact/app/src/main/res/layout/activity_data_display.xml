@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    // Scrollable content area
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            // Screen title
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Inventory Data"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            // Subtitle
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View and manage the items stored in your inventory."
+                android:gravity="center"
+                android:layout_marginTop="6dp"
+                android:textSize="12sp" />
+
+            // Table Header
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                // Item header
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Item"
+                    android:textSize="12sp" />
+
+                // Qty header
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Qty"
+                    android:textSize="12sp"
+                    android:gravity="center" />
+
+                // Location header
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Location"
+                    android:textSize="12sp"
+                    android:gravity="center" />
+
+                // Delete header
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Delete"
+                    android:textSize="12sp"
+                    android:gravity="center" />
+
+                // Details header
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Details"
+                    android:textSize="12sp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            // Dynamic list container
+            <LinearLayout
+                android:id="@+id/itemContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp" />
+
+            // Add New Item Header
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add New Item"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:textSize="12sp" />
+
+            // Add Item Row
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="6dp">
+
+                <EditText
+                    android:id="@+id/edtNewItemName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Item name"
+                    android:textSize="12sp"
+                    android:maxLines="1" />
+
+                <EditText
+                    android:id="@+id/edtNewItemQty"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Qty"
+                    android:inputType="number"
+                    android:textSize="12sp"
+                    android:maxLines="1"
+                    android:layout_marginStart="12dp" />
+
+                <EditText
+                    android:id="@+id/edtNewItemLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Location"
+                    android:textSize="12sp"
+                    android:maxLines="1"
+                    android:layout_marginStart="12dp" />
+            </LinearLayout>
+
+            // Add Item Button
+            <Button
+                android:id="@+id/btnAddItem"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="ADD ITEM"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="@color/purple_500"
+                android:layout_marginTop="12dp"
+                android:textSize="12sp" />
+
+            // SMS Settings Button
+            <Button
+                android:id="@+id/btnSmsSettings"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="SMS NOTIFICATION SETTINGS"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="@color/purple_500"
+                android:layout_marginTop="8dp"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    // Log Out button
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="LOG OUT"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/purple_500"
+        android:textSize="12sp" />
+
+</LinearLayout>

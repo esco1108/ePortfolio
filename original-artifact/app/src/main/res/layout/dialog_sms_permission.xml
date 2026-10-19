@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/popup_background"
+    android:padding="24dp">
+
+    // Close X
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentEnd="true"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:tint="#808080" />
+    </RelativeLayout>
+
+    // Message
+    <TextView
+        android:id="@+id/txtDialogMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="Do you want to grant permission for SMS notifications?"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal" />
+
+    // Yes / No buttons
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnYes"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:text="YES"
+            android:textAllCaps="true"
+            android:textSize="12sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/purple_500" />
+
+        <Space
+            android:layout_width="12dp"
+            android:layout_height="0dp" />
+
+        <Button
+            android:id="@+id/btnNo"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:text="NO"
+            android:textAllCaps="true"
+            android:textSize="12sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/purple_500" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@drawable/popup_background">
+
+    // Close icon
+    <ImageView
+        android:id="@+id/imgClose"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:tint="#888888" />
+
+    // Popup content
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:layout_marginTop="8dp">
+
+        // Item Description Label
+        <TextView
+            android:id="@+id/txtDescriptionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item Description:"
+            android:textStyle="bold"
+            android:textColor="@color/purple_500"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="6dp" />
+
+        // Actual Description
+        <TextView
+            android:id="@+id/txtDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description text goes here."
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+
+        // Last Edited Section
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/txtLastEditedLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Edited:"
+                android:textColor="@color/purple_500"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txtLastEditedValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00/00/00"
+                android:textSize="14sp"
+                android:layout_marginStart="6dp" />
+        </LinearLayout>
+
+        // Spacing
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="16dp" />
+
+        // Edit button
+        <Button
+            android:id="@+id/btnEditItem"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="EDIT ITEM"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:backgroundTint="@color/purple_500" />
+
+    </LinearLayout>
+
+</RelativeLayout>

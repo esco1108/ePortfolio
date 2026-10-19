@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@drawable/popup_background">
+
+    // Close icon
+    <ImageView
+        android:id="@+id/imgCloseEdit"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:tint="#888888" />
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit Item"
+            android:textStyle="bold"
+            android:textColor="@color/purple_500"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginBottom="10dp" />
+
+        <EditText
+            android:id="@+id/edtEditName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Item name"
+            android:textSize="13sp"
+            android:maxLines="1" />
+
+        <EditText
+            android:id="@+id/edtEditQty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Quantity"
+            android:inputType="number"
+            android:textSize="13sp"
+            android:maxLines="1"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/edtEditLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Location"
+            android:textSize="13sp"
+            android:maxLines="1"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/edtEditDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            android:textSize="13sp"
+            android:minLines="2"
+            android:layout_marginTop="8dp" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="16dp" />
+
+        <Button
+            android:id="@+id/btnSaveItem"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="SAVE"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:backgroundTint="@color/purple_500" />
+
+    </LinearLayout>
+</RelativeLayout>
